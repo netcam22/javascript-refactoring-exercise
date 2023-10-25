@@ -11,7 +11,7 @@ function processTransactions(transactions) {
     .sort(([nameA, qtyA], [nameB, qtyB]) =>
       qtyA < qtyB ? 1 : qtyA === qtyB && nameA > nameB ? 1 : -1
     )
-    .map(pair => pair.join(" "));
+    .map((pair) => pair.join(" "));
 }
 
 module.exports = processTransactions;
